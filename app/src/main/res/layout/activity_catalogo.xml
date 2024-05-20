@@ -5,13 +5,127 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".catalogoActivity">
 
     <TextView
         android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="80px"
+        android:text="NUESTROS PRODUCTOS" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50px"
+        android:text="Pasteles" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="172dp"
+            android:layout_height="132dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/chocolatecake" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="165dp"
+            android:layout_height="133dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/vanilla" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Torta de Moka" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:orientation="horizontal" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_horizontal"
+        android:textSize="50px"
+        android:text="Galletas" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="169dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="177dp"
+            android:layout_height="140dp"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/chipscookies" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="163dp"
+            android:layout_height="140dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/linzartcookie" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="143dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="213dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/redvelvet" />
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/vanillacookie" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/kittycookie" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Catalogo" />
+        android:orientation="horizontal"></LinearLayout>
 </LinearLayout>
