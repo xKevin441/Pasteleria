@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         button_contacto.setOnClickListener(){
-            val intent = Intent(this@MainActivity, contactosActivity::class.java)
+            val intent = Intent(this@MainActivity, pedidosActivity::class.java)
             startActivity(intent)
         }
 

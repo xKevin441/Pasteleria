@@ -16,7 +16,7 @@
             android:name=".catalogoActivity"
             android:exported="false" />
         <activity
-            android:name=".contactosActivity"
+            android:name=".pedidosActivity"
             android:exported="false" />
         <activity
             android:name=".ofertaActivity"
