@@ -54,7 +54,8 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="FELIZ DIA DE LA MADRE"
-                        android:textSize="24dp"
+                        android:textColor="#49454f"
+                        android:textSize="22dp"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -68,8 +69,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#49454f"
                         android:text="Aprovecha nuestras ofertas especiales del Dia de la Madre y dale una sorpresa a Mamá"
-                        android:textSize="21dp" />
+                        android:textSize="19dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -94,6 +97,7 @@
                         android:gravity="center_horizontal"
                         android:text="DESCUENTOS SEMANALES"
                         android:textSize="22dp"
+                        android:textColor="#49454f"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -113,6 +117,8 @@
                             android:layout_width="132dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="#49454f"
                             android:text="Cupcakes con descuento de hasta el 20% \n\n Finaliza en 5 dias"
                             android:textSize="20dp" />
 
@@ -139,9 +145,10 @@
                         android:id="@+id/textView10"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:text="POSTRES DE CHOCOLATE EN REBAJA"
+                        android:textColor="#49454f"
                         android:textSize="18dp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:text="POSTRES DE CHOCOLATE EN REBAJA"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -160,8 +167,10 @@
                             android:layout_width="131dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="#49454f"
                             android:text="Descuentos de hasta el 10% en postres de Chocolate \n\n SOLO POR HOY"
-                            android:textSize="20dp" />
+                            android:textSize="19dp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

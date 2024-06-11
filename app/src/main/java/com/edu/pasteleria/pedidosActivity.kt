@@ -2,7 +2,6 @@ package com.edu.pasteleria
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioButton
@@ -35,21 +34,21 @@ class pedidosActivity : AppCompatActivity() {
         val editTextcantidad = findViewById<EditText>(R.id.editTextcant)
         val textPedidos = findViewById<TextView>(R.id.textViewPedidos)
         val buttonEliminar = findViewById<Button>(R.id.buttonEliminar)
-
-        val radioGroup = findViewById<RadioGroup>(R.id.RadioGroup)
-        val selectedRadioButtonId = radioGroup.checkedRadioButtonId
-        val selectedRadioButton = findViewById<RadioButton>(selectedRadioButtonId)
-
         val editTextFecha = findViewById<EditText>(R.id.editTextFechaEntrega)
+        val radioGroup = findViewById<RadioGroup>(R.id.RadioGroup)
 
         buttonDBcrear.setOnClickListener(){
             dbHandler = BaseDatos(this)
             var success: Boolean = false
             val pedidos: Pedidos = Pedidos()
 
+            val selectedOptionId = radioGroup.checkedRadioButtonId
+            val selectedRadioButton = findViewById<RadioButton>(selectedOptionId)
+            //val textoRadioButton = selectedRadioButton.text.toString()
+
             pedidos.nombre_producto = editTextproducto.text.toString() // nombre
             pedidos.cantidad = editTextcantidad.text.toString() // cantidad
-            pedidos.metodo_entrega = "Entrega a domicilio"  // método de entrega
+            pedidos.metodo_entrega = selectedRadioButton.text.toString() // método de entrega
             pedidos.fecha = editTextFecha.text.toString() // Fecha entrega
 
             success = dbHandler?.addLugar(pedidos) as Boolean
@@ -62,17 +61,12 @@ class pedidosActivity : AppCompatActivity() {
         }
 
         buttonDBmostrar.setOnClickListener(){
-            // Obtener la lista de lugares desde la base de datos
             dbHandler = BaseDatos(this)
             listTasks = dbHandler?.lugar ?: emptyList()
 
-            // Concatenar todos los detalles en una sola cadena
             val detallesConcatenados = listTasks.joinToString(separator = "\n\n") {
                 "Producto: ${it.nombre_producto}\nCantidad: ${it.cantidad}\nMetodo de entrega: ${it.metodo_entrega}\nFecha de entrega: ${it.fecha}"
-                //"Producto: ${it.nombre_producto}\nCantidad: ${it.cantidad}"
             }
-
-            // Actualizar el contenido del TextView
             textPedidos.text = detallesConcatenados
 
            //listTasks = (dbHandler as BaseDatos).lugar
@@ -89,7 +83,6 @@ class pedidosActivity : AppCompatActivity() {
             dbHandler = BaseDatos(this)
             exito = dbHandler?.deleteAllLugares() as Boolean
             if(exito) {
-                // Aquí puedes agregar código para manejar el caso de éxito
                 Toast.makeText(this@pedidosActivity, "Eliminado exitosamente", Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(this@pedidosActivity, "Algo salio mal", Toast.LENGTH_SHORT).show()
