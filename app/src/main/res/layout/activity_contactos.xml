@@ -159,7 +159,7 @@
                     android:paddingBottom="8dp"
                     android:text="Nuestra Ubicación"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
                 <!-- Redes Sociales -->
                 <!--  <fragment

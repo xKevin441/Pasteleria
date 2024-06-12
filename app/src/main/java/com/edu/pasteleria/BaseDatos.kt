@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
 class BaseDatos(context: Context): SQLiteOpenHelper(context,BaseDatos.NOMBRE_BASE_DATOS,null,BaseDatos.VERSION_BASE_DATOS) {
-
     override fun onCreate(db: SQLiteDatabase?) {
         val CREAR_TABLA = "CREATE TABLE $NOMBRE_TABLA ($ID INTEGER PRIMARY KEY AUTOINCREMENT, $NOMBRE TEXT, $CANTIDAD INT, $METODO_ENTREGA TEXT, $FECHA TEXT, $DIR_ENTREGA TEXT);"
         db?.execSQL(CREAR_TABLA)
