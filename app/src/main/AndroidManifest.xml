@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pasteleria"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyADvFZWJhh6CnQ5B2Q4xNztOziGnV-8m7I" />
+
         <activity
             android:name=".contactosActivity"
             android:exported="false" />

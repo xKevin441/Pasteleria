@@ -3,212 +3,233 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo">
+    android:background="@drawable/fondo"
+    tools:context=".contactosActivity">
 
-    <LinearLayout
-        android:id="@+id/main"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        tools:context=".contactosActivity">
+        tools:ignore="UselessParent">
 
-        <!--<TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="contactos" />
-    -->
-
-        <!-- Encabezado -->
-        <TextView
-            android:id="@+id/header"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:background="@drawable/header"
-            android:paddingBottom="16dp"
-            android:text="      Contactos "
-            android:textColor="@color/white"
-            android:textSize="35sp"
-            android:textStyle="bold" />
-
-        <!-- Introducción -->
-        <TextView
-            android:id="@+id/contact_intro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:text="Nos encantaría saber de ti. Por favor, rellena el siguiente formulario o utiliza la información de contacto proporcionada." />
-
-
-
-        <!-- Formulario de Contacto -->
-
-        <TextView
-            android:id="@+id/contact_form_header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Formulario de Contacto"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:paddingBottom="8dp" />
-
-        <EditText
-            android:id="@+id/name"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre"
-            android:inputType="textPersonName"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                tools:context=".contactosActivity">
+
+                <!--<TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="contactos" />
+            -->
+
+                <!-- Encabezado -->
+                <TextView
+                    android:id="@+id/header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:background="@drawable/header"
+                    android:paddingBottom="16dp"
+                    android:text="      Contactos "
+                    android:textColor="@color/white"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <!-- Introducción -->
+                <TextView
+                    android:id="@+id/contact_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:text="Nos encantaría saber de ti. Por favor, rellena el siguiente formulario o utiliza la información de contacto proporcionada." />
+
+
+                <!-- Formulario de Contacto -->
+
+                <TextView
+                    android:id="@+id/contact_form_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:text="Formulario de Contacto"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@android:color/white"
+                    android:elevation="2dp"
+                    android:hint="Nombre"
+                    android:inputType="textPersonName"
+                    android:padding="8dp" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@android:color/white"
+                    android:elevation="2dp"
+                    android:hint="Correo Electrónico"
+                    android:inputType="textEmailAddress"
+                    android:padding="8dp" />
+
+                <!--<EditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mensaje"
+            android:inputType="textMultiLine"
+            android:minLines="5"
             android:padding="8dp"
             android:background="@android:color/white"
             android:layout_marginBottom="8dp"
             android:elevation="2dp" />
+            -->
 
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Correo Electrónico"
-            android:inputType="textEmailAddress"
-            android:padding="8dp"
-            android:background="@android:color/white"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp" />
+                <Button
+                    android:id="@+id/send_button"
+                    android:layout_width="101dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="?attr/colorAccent"
+                    android:text="Enviar"
+                    android:textColor="@android:color/white" />
 
-        <!--<EditText
-       android:id="@+id/message"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:hint="Mensaje"
-       android:inputType="textMultiLine"
-       android:minLines="5"
-       android:padding="8dp"
-       android:background="@android:color/white"
-       android:layout_marginBottom="8dp"
-       android:elevation="2dp" />
-   -->
+                <!-- Información de Contacto -->
+                <TextView
+                    android:id="@+id/contact_info_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/info_pasteleria"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="8dp"
+                    android:text="Información de la Pastelería"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/send_button"
-            android:layout_width="101dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="?attr/colorAccent"
-            android:text="Enviar"
-            android:textColor="@android:color/white" />
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dirección: Calle Falsa 123, Ciudad, País" />
 
-        <!-- Información de Contacto -->
-        <TextView
-            android:id="@+id/contact_info_header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Información de la Pastelería"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:paddingTop="2dp"
-            android:paddingBottom="8dp"
-            android:background="@color/info_pasteleria" />
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Teléfono: +123 456 789" />
 
-        <TextView
-            android:id="@+id/address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dirección: Calle Falsa 123, Ciudad, País" />
+                <TextView
+                    android:id="@+id/email_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Correo Electrónico: contacto@dulcesabor.com" />
 
-        <TextView
-            android:id="@+id/phone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Teléfono: +123 456 789"
-            android:layout_marginTop="4dp" />
+                <TextView
+                    android:id="@+id/hours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Horario de Atención: Lunes a Viernes, 9:00 AM - 6:00 PM" />
 
-        <TextView
-            android:id="@+id/email_contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Correo Electrónico: contacto@dulcesabor.com"
-            android:layout_marginTop="4dp" />
+                <!-- Mapa -->
+                <TextView
+                    android:id="@+id/map_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="8dp"
+                    android:text="Nuestra Ubicación"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/hours"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Horario de Atención: Lunes a Viernes, 9:00 AM - 6:00 PM"
-            android:layout_marginTop="4dp" />
+                <!-- Redes Sociales -->
+                <!--  <fragment
+                  android:id="@+id/map"
+                  android:name="com.google.android.gms.maps.SupportMapFragment"
+                  android:layout_width="match_parent"
+                  android:layout_height="85dp"
+                  tools:ignore="MissingClass" /> -->
 
-        <!-- Mapa -->
-        <TextView
-            android:id="@+id/map_header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nuestra Ubicación"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:paddingTop="24dp"
-            android:paddingBottom="8dp" />
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/mapView1"
+                    android:layout_width="374dp"
+                    android:layout_height="230dp"
+                    android:accessibilityHeading="false" />
 
-        <!-- Redes Sociales -->
-        <!--  <fragment
-              android:id="@+id/map"
-              android:name="com.google.android.gms.maps.SupportMapFragment"
-              android:layout_width="match_parent"
-              android:layout_height="85dp"
-              tools:ignore="MissingClass" /> -->
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Calle: example   Nro: ###" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Calle: example   Nro: ###" />
+                <TextView
+                    android:id="@+id/social_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="8dp"
+                    android:text="Síguenos en Redes Sociales..!"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-        <TextView
-              android:id="@+id/social_header"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="Síguenos en Redes Sociales..!"
-              android:textSize="20sp"
-              android:textStyle="bold"
-              android:paddingTop="24dp"
-              android:paddingBottom="8dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
 
-          <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="horizontal"
-              android:gravity="center"
-              android:paddingTop="10dp">
+                    <ImageButton
+                        android:id="@+id/whatsapp_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:contentDescription="WhatsApp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/whats" />
 
-              <ImageButton
-                  android:id="@+id/whatsapp_button"
-                  android:layout_width="40dp"
-                  android:layout_height="40dp"
-                  android:layout_marginEnd="16dp"
-                  android:background="?android:attr/selectableItemBackground"
-                  android:contentDescription="WhatsApp"
-                  android:scaleType="fitCenter"
-                  android:src="@drawable/whats" />
+                    <ImageButton
+                        android:id="@+id/facebook_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:contentDescription="Facebook"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/facebook" />
 
-              <ImageButton
-                  android:id="@+id/facebook_button"
-                  android:layout_width="40dp"
-                  android:layout_height="40dp"
-                  android:src="@drawable/facebook"
-                  android:background="?android:attr/selectableItemBackground"
-                  android:contentDescription="Facebook"
-                  android:scaleType="fitCenter"
-                  android:layout_marginEnd="16dp"/>
+                    <ImageButton
+                        android:id="@+id/instagram_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:contentDescription="Instagram"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/instagram" />
+                </LinearLayout>
+            </LinearLayout>
 
-              <ImageButton
-                  android:id="@+id/instagram_button"
-                  android:layout_width="40dp"
-                  android:layout_height="40dp"
-                  android:src="@drawable/instagram"
-                  android:background="?android:attr/selectableItemBackground"
-                  android:scaleType="fitCenter"
-                  android:contentDescription="Instagram"/>
-          </LinearLayout>
-      </LinearLayout>
-  </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

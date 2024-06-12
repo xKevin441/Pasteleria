@@ -7,42 +7,61 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@drawable/fondo_principal"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="204dp"
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:text="CookieCat"
+        android:textStyle="bold"
+        android:background="@color/white"
         android:textSize="80px" />
 
     <Button
         android:id="@+id/button_ofertas"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FFB8B8"
+        android:textColor="@color/black"
         android:text="OFERTAS" />
 
     <Button
         android:id="@+id/button_catalogo"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FFB8B8"
+        android:textColor="@color/black"
         android:text="CATALOGO" />
 
     <Button
         android:id="@+id/button_contactos"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FFB8B8"
+        android:textColor="@color/black"
         android:text="CONTACTOS" />
 
     <Button
         android:id="@+id/button_pedidos"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FFB8B8"
+        android:textColor="@color/black"
         android:text="PEDIDOS" />
 
     <Button
         android:id="@+id/button_salir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FFB8B8"
+        android:textColor="@color/black"
         android:text="SALIR" />
 
 </LinearLayout>
