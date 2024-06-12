@@ -36,6 +36,7 @@ class pedidosActivity : AppCompatActivity() {
         val buttonEliminar = findViewById<Button>(R.id.buttonEliminar)
         val editTextFecha = findViewById<EditText>(R.id.editTextFechaEntrega)
         val radioGroup = findViewById<RadioGroup>(R.id.RadioGroup)
+        val editTextdirEntrega = findViewById<EditText>(R.id.editTextDirEntrega)
 
         buttonDBcrear.setOnClickListener(){
             dbHandler = BaseDatos(this)
@@ -50,6 +51,7 @@ class pedidosActivity : AppCompatActivity() {
             pedidos.cantidad = editTextcantidad.text.toString() // cantidad
             pedidos.metodo_entrega = selectedRadioButton.text.toString() // método de entrega
             pedidos.fecha = editTextFecha.text.toString() // Fecha entrega
+            pedidos.dir_entrega = editTextdirEntrega.text.toString()  // Direccion de entrega
 
             success = dbHandler?.addLugar(pedidos) as Boolean
             if(success) {
@@ -65,7 +67,7 @@ class pedidosActivity : AppCompatActivity() {
             listTasks = dbHandler?.lugar ?: emptyList()
 
             val detallesConcatenados = listTasks.joinToString(separator = "\n\n") {
-                "Producto: ${it.nombre_producto}\nCantidad: ${it.cantidad}\nMetodo de entrega: ${it.metodo_entrega}\nFecha de entrega: ${it.fecha}"
+                "Producto: ${it.nombre_producto}\nCantidad: ${it.cantidad}\nMetodo de entrega: ${it.metodo_entrega}\nFecha de entrega: ${it.fecha}\nDireccion de entrega: ${it.dir_entrega}"
             }
             textPedidos.text = detallesConcatenados
 

@@ -68,7 +68,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/name"
+                    android:id="@+id/editTextname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
@@ -79,7 +79,7 @@
                     android:padding="8dp" />
 
                 <EditText
-                    android:id="@+id/email"
+                    android:id="@+id/editTextemail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
@@ -175,12 +175,20 @@
                     android:layout_height="230dp"
                     android:accessibilityHeading="false" />
 
+                <Button
+                    android:id="@+id/button_mostrar_clientes"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Mostrar Clientes"
+                    android:textColor="@android:color/white" />
+
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/textMostrarClientes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Calle: example   Nro: ###" />
+                    android:layout_marginTop="16dp"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/social_header"
@@ -228,6 +236,7 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/instagram" />
                 </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>

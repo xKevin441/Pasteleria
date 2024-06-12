@@ -6,4 +6,5 @@ class Pedidos {
     var cantidad: String = ""
     var metodo_entrega: String = ""
     var fecha: String = ""
+    var dir_entrega: String = ""
 }

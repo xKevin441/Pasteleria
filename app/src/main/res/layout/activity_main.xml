@@ -28,7 +28,7 @@
         android:id="@+id/button_ofertas"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFB8B8"
+        android:backgroundTint="@color/botones"
         android:textColor="@color/black"
         android:text="OFERTAS" />
 
@@ -36,7 +36,7 @@
         android:id="@+id/button_catalogo"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFB8B8"
+        android:backgroundTint="@color/botones"
         android:textColor="@color/black"
         android:text="CATALOGO" />
 
@@ -44,7 +44,7 @@
         android:id="@+id/button_contactos"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFB8B8"
+        android:backgroundTint="@color/botones"
         android:textColor="@color/black"
         android:text="CONTACTOS" />
 
@@ -52,7 +52,7 @@
         android:id="@+id/button_pedidos"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFB8B8"
+        android:backgroundTint="@color/botones"
         android:textColor="@color/black"
         android:text="PEDIDOS" />
 
@@ -60,7 +60,7 @@
         android:id="@+id/button_salir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFB8B8"
+        android:backgroundTint="@color/botones"
         android:textColor="@color/black"
         android:text="SALIR" />
 

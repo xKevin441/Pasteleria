@@ -101,6 +101,19 @@
                     android:text="Recoger de la tienda" />
             </RadioGroup>
 
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Direccion de entrega" />
+
+            <EditText
+                android:id="@+id/editTextDirEntrega"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
             <Button
                 android:id="@+id/buttoncrear"
                 android:layout_width="match_parent"

@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper
 class BaseDatos(context: Context): SQLiteOpenHelper(context,BaseDatos.NOMBRE_BASE_DATOS,null,BaseDatos.VERSION_BASE_DATOS) {
 
     override fun onCreate(db: SQLiteDatabase?) {
-        val CREAR_TABLA = "CREATE TABLE $NOMBRE_TABLA ($ID INTEGER PRIMARY KEY AUTOINCREMENT, $NOMBRE TEXT, $CANTIDAD INT, $METODO_ENTREGA TEXT, $FECHA TEXT);"
+        val CREAR_TABLA = "CREATE TABLE $NOMBRE_TABLA ($ID INTEGER PRIMARY KEY AUTOINCREMENT, $NOMBRE TEXT, $CANTIDAD INT, $METODO_ENTREGA TEXT, $FECHA TEXT, $DIR_ENTREGA TEXT);"
         db?.execSQL(CREAR_TABLA)
     }
 
@@ -26,6 +26,7 @@ class BaseDatos(context: Context): SQLiteOpenHelper(context,BaseDatos.NOMBRE_BAS
         values.put(CANTIDAD, pedidos.cantidad)
         values.put(METODO_ENTREGA, pedidos.metodo_entrega)
         values.put(FECHA, pedidos.fecha)
+        values.put(DIR_ENTREGA, pedidos.dir_entrega)
         val _success = db.insert(NOMBRE_TABLA,null,values)
         db.close()
         return (Integer.parseInt("$_success") != -1)
@@ -45,6 +46,7 @@ class BaseDatos(context: Context): SQLiteOpenHelper(context,BaseDatos.NOMBRE_BAS
                 pedidos.cantidad = cursor.getString(cursor.getColumnIndex(CANTIDAD))
                 pedidos.metodo_entrega = cursor.getString(cursor.getColumnIndex(METODO_ENTREGA))
                 pedidos.fecha = cursor.getString(cursor.getColumnIndex(FECHA))
+                pedidos.dir_entrega = cursor.getString(cursor.getColumnIndex(DIR_ENTREGA))
             }
         }
         cursor.close()
@@ -66,6 +68,7 @@ class BaseDatos(context: Context): SQLiteOpenHelper(context,BaseDatos.NOMBRE_BAS
                 pedidos.cantidad = cursor.getString(cursor.getColumnIndex(CANTIDAD))
                 pedidos.metodo_entrega = cursor.getString(cursor.getColumnIndex(METODO_ENTREGA))
                 pedidos.fecha = cursor.getString(cursor.getColumnIndex(FECHA))
+                pedidos.dir_entrega = cursor.getString(cursor.getColumnIndex(DIR_ENTREGA))
                 pedidosList.add(pedidos)
             }
         }
@@ -80,6 +83,7 @@ class BaseDatos(context: Context): SQLiteOpenHelper(context,BaseDatos.NOMBRE_BAS
         values.put(CANTIDAD,pedidos.cantidad)
         values.put(METODO_ENTREGA, pedidos.metodo_entrega)
         values.put(FECHA, pedidos.fecha)
+        values.put(DIR_ENTREGA, pedidos.dir_entrega)
         val _success = db.update(NOMBRE_TABLA,values,ID+"=?",arrayOf(pedidos.id.toString())).toLong()
         db.close()
         return Integer.parseInt("$_success") != -1
@@ -100,7 +104,7 @@ class BaseDatos(context: Context): SQLiteOpenHelper(context,BaseDatos.NOMBRE_BAS
     }
 
     companion object{
-        private val VERSION_BASE_DATOS = 2
+        private val VERSION_BASE_DATOS = 3
         private val NOMBRE_BASE_DATOS = "dbsis104"
         private val NOMBRE_TABLA = "pedidos"
         private val ID = "id"
@@ -108,5 +112,6 @@ class BaseDatos(context: Context): SQLiteOpenHelper(context,BaseDatos.NOMBRE_BAS
         private val CANTIDAD = "cantidad"
         private val METODO_ENTREGA = "metodo_entrega"
         private val FECHA = "fecha"
+        private val DIR_ENTREGA = "dir_entrega"
     }
 }
