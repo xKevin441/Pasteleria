@@ -67,7 +67,7 @@ class contactosActivity : AppCompatActivity(), OnMapReadyCallback {
             listTasks = dbHandler?.lugar ?: emptyList()
 
             val detallesConcatenados = listTasks.joinToString(separator = "\n\n") {
-                " Nombre: ${it.nombre}\n E-mail: ${it.correo}\n"
+                " Nombre: ${it.nombre}\n E-mail: ${it.correo}"
             }
             textMostrarClientes.text = detallesConcatenados
         }
@@ -82,16 +82,18 @@ class contactosActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.addMarker(MarkerOptions().position(Principal).title("Pasteleria principal"))
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Principal, 14f))
 
-        val Sucursal1 = LatLng(-19.046419, -65.252256)
-        mMap.addMarker(MarkerOptions().position(Sucursal1).title("CupCakes Sucursal"))
+        val Sucursal1 = LatLng(-19.047516, -65.268512)
+        mMap.addMarker(MarkerOptions().position(Sucursal1).title("CupCakes Sucursal A"))
 
-        val Sucursal2 = LatLng(-19.043374, -65.263479)
-        mMap.addMarker(MarkerOptions().position(Sucursal2).title("CupCakes sucursal"))
+        val Sucursal2 = LatLng(-19.041589, -65.260502)
+        mMap.addMarker(MarkerOptions().position(Sucursal2).title("CupCakes sucursal B"))
 
-        val Sucursal3 = LatLng(-19.045108, -65.257826)
-        mMap.addMarker(MarkerOptions().position(Sucursal3).title("CupCakes Sucursal"))
+        val Sucursal3 = LatLng(-19.039587, -65.251826)
+        mMap.addMarker(MarkerOptions().position(Sucursal3).title("CupCakes Sucursal C"))
 
-        val Sucursal4 = LatLng(-19.047087, -65.263557)
-        mMap.addMarker(MarkerOptions().position(Sucursal4).title("CupCakes Sucursal"))
+        val Sucursal4 = LatLng(-19.052347, -65.250443)
+        mMap.addMarker(MarkerOptions().position(Sucursal4).title("CupCakes Sucursal D"))
     }
 }
+
+

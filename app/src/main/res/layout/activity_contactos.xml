@@ -107,7 +107,6 @@
                     android:layout_width="101dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:background="?attr/colorAccent"
                     android:text="Enviar"
                     android:textColor="@android:color/white" />
 
@@ -177,10 +176,10 @@
 
                 <Button
                     android:id="@+id/button_mostrar_clientes"
-                    android:layout_width="185dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Mostrar Clientes"
+                    android:text="Mostrar Clientes Registrados"
                     android:textColor="@android:color/white" />
 
                 <TextView
@@ -188,7 +187,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/social_header"

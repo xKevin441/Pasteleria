@@ -11,265 +11,276 @@
     android:orientation="vertical"
     tools:context=".catalogoActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="NUESTROS PRODUCTOS"
-        android:textColor="#FBF2EF"
-        android:textSize="80px" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:text="Pasteles"
-        android:textColor="#F8C8B5"
-        android:textSize="50px" />
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="144dp"
-        android:background="#F4B898"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="172dp"
-            android:layout_height="132dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/chocolatecake" />
-
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="165dp"
-            android:layout_height="133dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/vanilla" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="320dp"
-        android:layout_height="26dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="174dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
-            android:text="Torta de Moka"
-            android:textColor="#FFF5F5" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Torta de Vainilla"
-            android:textColor="#FFF2F2" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|center_horizontal"
-        android:fontFamily="sans-serif-medium"
-        android:text="Galletas"
-        android:textColor="#F1D0D0"
-        android:textSize="50px" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="169dp"
-        android:background="#CAF3FD"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="177dp"
-            android:layout_height="140dp"
-            android:layout_gravity="start"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/chipscookies" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="163dp"
-            android:layout_height="140dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/linzartcookie" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="312dp"
-        android:layout_height="31dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
             <TextView
-                android:id="@+id/textView13"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Galletas con Chips"
-                android:textColor="#FFF0F0" />
-
-            <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Galletas Linzart "
-                android:textColor="#FFE6E6" />
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="NUESTROS PRODUCTOS"
+                android:textColor="#FBF2EF"
+                android:textSize="80px" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Pasteles"
+                android:textColor="#F8C8B5"
+                android:textSize="50px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:background="#F4B898"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="172dp"
+                    android:layout_height="132dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/chocolatecake" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="165dp"
+                    android:layout_height="133dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/vanilla" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="26dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="174dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="Torta de Moka"
+                    android:textColor="#FFF5F5" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Torta de Vainilla"
+                    android:textColor="#FFF2F2" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:fontFamily="sans-serif-medium"
+                android:text="Galletas"
+                android:textColor="#F1D0D0"
+                android:textSize="50px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="169dp"
+                android:background="#CAF3FD"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="177dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/chipscookies" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="163dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/linzartcookie" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="312dp"
+                android:layout_height="31dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Galletas con Chips"
+                        android:textColor="#FFF0F0" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Galletas Linzart "
+                        android:textColor="#FFE6E6" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="178dp"
+                android:background="#FBDEC4"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="389dp"
+                    android:layout_height="157dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/vanillacookie" />
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="159dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/redvelvet" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="326dp"
+                android:layout_height="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="183dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Galletas de Vainilla"
+                    android:textColor="#FFE5E5" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Galletas Red Velvet"
+                    android:textColor="#FFECEC" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:text="Cupcakes"
+                android:textColor="#F3C5C5"
+                android:textSize="50px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="#D1FAC2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="86dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/cupcakerosa" />
+
+                <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/cupcakeceleste" />
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/cupcakepurpura" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="363dp"
+                android:layout_height="22dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="19dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="31dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="3dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#C7AFF1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/muffins" />
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/paquetes" />
+
+                <ImageView
+                    android:id="@+id/imageView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/bombones" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="178dp"
-        android:background="#FBDEC4"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/imageView16"
-            android:layout_width="389dp"
-            android:layout_height="157dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/vanillacookie" />
-
-        <ImageView
-            android:id="@+id/imageView17"
-            android:layout_width="wrap_content"
-            android:layout_height="159dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/redvelvet" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="326dp"
-        android:layout_height="20dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="183dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Galletas de Vainilla"
-            android:textColor="#FFE5E5" />
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Galletas Red Velvet"
-            android:textColor="#FFECEC" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:layout_gravity="center"
-        android:fontFamily="sans-serif-medium"
-        android:text="Cupcakes"
-        android:textColor="#F3C5C5"
-        android:textSize="50px" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="88dp"
-        android:background="#D1FAC2"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/imageView18"
-            android:layout_width="wrap_content"
-            android:layout_height="86dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/cupcakerosa" />
-
-        <ImageView
-            android:id="@+id/imageView19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/cupcakeceleste" />
-
-        <ImageView
-            android:id="@+id/imageView20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/cupcakepurpura" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="363dp"
-        android:layout_height="22dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="19dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/textView24"
-            android:layout_width="31dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="3dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:background="#C7AFF1"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/imageView21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/muffins" />
-
-        <ImageView
-            android:id="@+id/imageView22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/paquetes" />
-
-        <ImageView
-            android:id="@+id/imageView23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/bombones" />
-    </LinearLayout>
-
+    </ScrollView>
 </LinearLayout>

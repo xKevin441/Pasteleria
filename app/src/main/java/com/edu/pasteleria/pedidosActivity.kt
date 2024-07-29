@@ -1,6 +1,7 @@
 package com.edu.pasteleria
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -33,10 +34,12 @@ class pedidosActivity : AppCompatActivity() {
         val editTextproducto = findViewById<EditText>(R.id.editTextprod)
         val editTextcantidad = findViewById<EditText>(R.id.editTextcant)
         val textPedidos = findViewById<TextView>(R.id.textViewPedidos)
-        val buttonEliminar = findViewById<Button>(R.id.buttonEliminar)
         val editTextFecha = findViewById<EditText>(R.id.editTextFechaEntrega)
         val radioGroup = findViewById<RadioGroup>(R.id.RadioGroup)
         val editTextdirEntrega = findViewById<EditText>(R.id.editTextDirEntrega)
+
+        val buttonEliminar = findViewById<Button>(R.id.buttonEliminar)
+        val buttonActualizar = findViewById<Button>(R.id.buttonActualizar)
 
         buttonDBcrear.setOnClickListener(){
             dbHandler = BaseDatos(this)
@@ -67,20 +70,14 @@ class pedidosActivity : AppCompatActivity() {
             listTasks = dbHandler?.lugar ?: emptyList()
 
             val detallesConcatenados = listTasks.joinToString(separator = "\n\n") {
-                "Producto: ${it.nombre_producto}\nCantidad: ${it.cantidad}\nMetodo de entrega: ${it.metodo_entrega}\nFecha de entrega: ${it.fecha}\nDireccion de entrega: ${it.dir_entrega}"
+                "Producto: ${it.nombre_producto}\nCantidad: ${it.cantidad}\nMetodo de entrega: ${it.metodo_entrega}\n" +
+                        "Fecha de entrega: ${it.fecha}\nDireccion de entrega: ${it.dir_entrega}"
             }
             textPedidos.text = detallesConcatenados
-
-           //listTasks = (dbHandler as BaseDatos).lugar
-          /*  Log.d("Datos","--->" + listTasks[0].nombre_producto)
-            for(pedidos in listTasks){
-                //Log.d("Datos","--->" + lugares.nombre)
-                Toast.makeText(this@pedidosActivity, "-->"+pedidos.nombre_producto, Toast.LENGTH_SHORT).show()
-                Toast.makeText(this@pedidosActivity, "-->"+pedidos.cantidad, Toast.LENGTH_SHORT).show()
-            }*/
         }
 
-        buttonEliminar.setOnClickListener(){
+
+      /* buttonEliminar.setOnClickListener(){
             var exito: Boolean = false
             dbHandler = BaseDatos(this)
             exito = dbHandler?.deleteAllLugares() as Boolean
@@ -89,6 +86,16 @@ class pedidosActivity : AppCompatActivity() {
             }else{
                 Toast.makeText(this@pedidosActivity, "Algo salio mal", Toast.LENGTH_SHORT).show()
             }
+        }*/
+
+        buttonActualizar.setOnClickListener(){
+            intent = Intent(this@pedidosActivity, actualizarbdActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonEliminar.setOnClickListener(){
+            val intent = Intent(this@pedidosActivity, eliminarbdActivity::class.java)
+            startActivity(intent)
         }
     }
 }
